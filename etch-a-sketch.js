@@ -12,8 +12,11 @@ function createPad(size) {
         CONTAINER.append(yDiv);
     }
 }
-createPad(128);
+createPad(32);
 
-document.querySelectorAll('.xDiv').forEach(div => div.addEventListener('mouseenter', function(e) {
+document.querySelectorAll('.xDiv').forEach(div => div.addEventListener('mousemove', function(e) {
+    if(e.buttons == 1) {
+        return;
+    }
     e.target.style.backgroundColor = 'black';
 }));
