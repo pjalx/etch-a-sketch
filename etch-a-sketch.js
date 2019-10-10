@@ -1,6 +1,5 @@
 function createPad(size) {
     const CONTAINER = document.getElementById('container');
-    CONTAINER.style.border = '1px solid black';
     for (let i = 1, yDiv; i <= size; i++) {
         yDiv = document.createElement('DIV');
         yDiv.setAttribute('class', 'yDiv')
@@ -12,7 +11,16 @@ function createPad(size) {
         CONTAINER.append(yDiv);
     }
 }
-createPad(32);
+
+function clearPad() {
+    document.querySelectorAll('.xDiv').forEach(function(div) {
+        if(div.style.backgroundColor) {
+            div.style.backgroundColor = '';
+        }
+    });
+}
+
+createPad(16);
 
 document.querySelectorAll('.xDiv').forEach(div => div.addEventListener('mousemove', function(e) {
     if(e.buttons == 1) {
@@ -20,3 +28,5 @@ document.querySelectorAll('.xDiv').forEach(div => div.addEventListener('mousemov
     }
     e.target.style.backgroundColor = 'black';
 }));
+
+document.getElementById('clear_but').addEventListener('click', clearPad);
