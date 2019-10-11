@@ -2,72 +2,66 @@
     margin: 0;
     padding: 0;
 }
-html, body {
+
+ body {
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: red;
 }
 
-body {
-    flex-direction: column;
+h1 {
+    padding-bottom: 15px;
 }
 
 #top_div {
-    position: relative;
     text-align: center;
-    margin-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .button {
     border: none;
-    color: white;
-    background: red;
+    color: black;
+    background: white;
     text-align: center;
     font-size: 16px;
     padding: 15px 25px;
     border-radius: 5px;
+    width: 150px;
 }
 
 .button:hover {
-    color: red;
-    background: white;
-    border: 1px solid red;
+    color: white;
+    background: red;
+    border: 1px solid white;
+}
+
+.but_focused {
+    color: white;
+    background: red;
+    border: 1px solid white;
 }
 
 #container {
-    margin: auto;
     height: 70vh;
     width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+body, #container {
     min-width: 700px;
-    display: flex;
-    flex-direction: column;
-    /*align-items: center;*/
 }
 
-/*
-body {
-    margin: auto;
-    height: 70vh;
-    width: 40vw;
-    min-width: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-*/
 .yDiv {
     display: flex;
     height: 100%;
     width: 100%;
     border: 1px solid black;
+    background: gray;
 }
 
 .xDiv {
